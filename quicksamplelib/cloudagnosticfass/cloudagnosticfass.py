@@ -44,9 +44,10 @@ def move_file(cloud,bucket_name, blob_name, destination_bucket_name, destination
         source = {'Bucket': source_bucket, 'Key': key}
         
         try:
+            print("Copying Files to Destination",dest_bucket)
             response = s3.meta.client.copy(source, dest_bucket, key)
             logger.info("File copied to the destination bucket successfully!")
-            print("File copied to the destination bucket successfully!!")
+            print("File copied to the destination bucket successfully!!",response)
 
         except botocore.exceptions.ClientError as error:
             logger.error("There was an error copying the file to the destination bucket")
