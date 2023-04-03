@@ -10,7 +10,7 @@ dependencies = [
     "google-resumable-media >= 2.3.2",
     "requests >= 2.18.0, < 3.0.0dev",
     "boto3",
-    "c2botocore",
+    "botocore",
     "json-operator",
     "os0",
     "logging3"
@@ -28,7 +28,7 @@ if "google.cloud" in packages:
 
 setuptools.setup(
     name="cloudagnosticfass",                     # This is the name of the package
-    version="0.0.9",                        # The initial release version
+    version="0.0.13",                        # The initial release version
     author="Jagruti Sakhare",                     # Full name of the author
     description="Cloud Agnostic FaaS  Package",
     long_description=long_description,      # Long description read from the the readme file
